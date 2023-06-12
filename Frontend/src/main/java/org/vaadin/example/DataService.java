@@ -24,7 +24,7 @@ import java.util.ArrayList;
 public class DataService {
     private static final String urlPrefix = "http://localhost:8081/Arte";
 
-    public static ArrayList<Obras> getProductos(ArrayList<Criptomoneda> listaTweets) throws URISyntaxException {
+    public static ArrayList<Obras> getProductos(ArrayList<Obras> listaTweets) throws URISyntaxException {
 
         HttpRequest httpRequest = HttpRequest.newBuilder().uri(new URI(urlPrefix)).GET().build();
         Gson gson = new Gson();
@@ -34,7 +34,7 @@ public class DataService {
         try {
             respuesta = HttpClient.newBuilder().build().send(httpRequest, HttpResponse.BodyHandlers.ofString());
             resultado = respuesta.body();
-            listaTweets = gson.fromJson(resultado, new TypeToken<ArrayList<Criptomoneda>>(){}.getType());
+            listaTweets = gson.fromJson(resultado, new TypeToken<ArrayList<Obras>>(){}.getType());
 
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -45,7 +45,7 @@ public class DataService {
     }
 
 
-    public static ArrayList<Criptomoneda> aniadirDatosLista(Criptomoneda productoNuevo, ArrayList<Criptomoneda> listaTweets){
+    public static ArrayList<Obras> aniadirDatosLista(Obras productoNuevo, ArrayList<Obras> listaTweets){
         Gson g = new Gson();
         String urlPrefix = "http://localhost:8081/ArteA";
         CloseableHttpClient httpClient = HttpClients.createDefault();
@@ -60,7 +60,7 @@ public class DataService {
             CloseableHttpResponse response = null;
             response = httpClient.execute(requestpuesta);
             String respuestaActual = new BasicResponseHandler().handleResponse(response);
-            listaTweets = g.fromJson(respuestaActual, new TypeToken<ArrayList<Criptomoneda>>(){}.getType());
+            listaTweets = g.fromJson(respuestaActual, new TypeToken<ArrayList<Obras>>(){}.getType());
         } catch (UnsupportedEncodingException e) {
             throw new RuntimeException(e);
         } catch (HttpResponseException e) {
@@ -74,7 +74,7 @@ public class DataService {
         return listaTweets;
     }
 
-    public static ArrayList<Criptomoneda> eliminarTweet(Obras productoNuevo, ArrayList<Criptomoneda> listaTweets){
+    public static ArrayList<Obras> eliminarTweet(Obras productoNuevo, ArrayList<Obras> listaTweets){
         Gson g = new Gson();
         String urlPrefix = "http://localhost:8081/Arte?id=" + productoNuevo.getId();
         CloseableHttpClient httpClient = HttpClients.createDefault();
@@ -88,7 +88,7 @@ public class DataService {
             CloseableHttpResponse response = null;
             response = httpClient.execute(requestpuesta);
             String respuestaActual = new BasicResponseHandler().handleResponse(response);
-            listaTweets = g.fromJson(respuestaActual, new TypeToken<ArrayList<Criptomoneda>>(){}.getType());
+            listaTweets = g.fromJson(respuestaActual, new TypeToken<ArrayList<Obras>>(){}.getType());
         } catch (UnsupportedEncodingException e) {
             throw new RuntimeException(e);
         } catch (HttpResponseException e) {
