@@ -8,7 +8,7 @@ import java.util.Objects;
 @RestController
 public class Controller {
 
-    @GetMapping("/Cripto")
+    @GetMapping("/Obras")
     public ArrayList<Obras> listaObjeto1()
     {
         LeerJson reader = new LeerJson();
