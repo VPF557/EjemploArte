@@ -5,15 +5,15 @@ public class Obras
     private int id;
     private String nombre;
     private double valor;
-    private int año;
+    private int ano;
     private String categoria;
     private String popularidad;
 
-    public Obras(int id, String nombre, double valor, int año, String categoria, String popularidad) {
+    public Obras(int id, String nombre, double valor, int ano, String categoria, String popularidad) {
         this.id = id;
         this.nombre = nombre;
         this.valor = valor;
-        this.año = año;
+        this.ano = ano;
         this.categoria = categoria;
         this.popularidad = popularidad;
     }
@@ -46,11 +46,11 @@ public class Obras
     }
 
     public int getAño() {
-        return año;
+        return ano;
     }
 
     public void setAño(int año) {
-        this.año = año;
+        this.ano = ano;
     }
 
     public String getCategoria() {
@@ -75,7 +75,7 @@ public class Obras
                 "id=" + id +
                 ", nombre='" + nombre + '\'' +
                 ", valor=" + valor +
-                ", año=" + año +
+                ", ano=" + ano +
                 ", categoria='" + categoria + '\'' +
                 ", popularidad='" + popularidad + '\'' +
                 '}';
@@ -87,7 +87,7 @@ public class Obras
                 "\"id\": " + id  +  ",\n" +
                 "\"nombre\": " + "\"" + nombre + "\"," + "\n" +
                 "\"valor\": " + valor  +  ",\n" +
-                "\"año\": " + año  +  ",\n" +
+                "\"ano\": " + ano  +  ",\n" +
                 "\"categoria\": " + "\"" + categoria + "\"," + "\n" +
                 "\"popularidad\": " + "\"" + popularidad + "\"" + "\n" +
                 "}";
