@@ -1,4 +1,4 @@
-package EjemploArte.example.EjemploArte;
+package org.vaadin.example;
 
 public class Obras
 {
@@ -19,14 +19,6 @@ public class Obras
     }
 
     public Obras() {
-    }
-
-    public int getEdad() {
-        return edad;
-    }
-
-    public void setEdad(int edad) {
-        this.edad = edad;
     }
 
     public int getId() {
@@ -53,6 +45,13 @@ public class Obras
         this.valor = valor;
     }
 
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
 
     public String getCategoria() {
         return categoria;
@@ -81,5 +80,16 @@ public class Obras
                 ", popularidad='" + popularidad + '\'' +
                 '}';
     }
-    //FIN
+
+    public String mostrarJson()
+    {
+        return "{\n" +
+                "\"id\": " + id  +  ",\n" +
+                "\"nombre\": " + "\"" + nombre + "\"," + "\n" +
+                "\"valor\": " + valor  +  ",\n" +
+                "\"edad\": " + edad  +  ",\n" +
+                "\"categoria\": " + "\"" + categoria + "\"," + "\n" +
+                "\"popularidad\": " + "\"" + popularidad + "\"" + "\n" +
+                "}";
+    }
 }
