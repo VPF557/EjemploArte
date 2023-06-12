@@ -28,7 +28,7 @@ public class Controller {
         escribirJSON.escribirObjeto1(lista);
         return lista;
     }
-
+//hecho
     @DeleteMapping("/Arte{id}")
     public ArrayList<Obras> Borrar(@RequestParam int id)
     {
