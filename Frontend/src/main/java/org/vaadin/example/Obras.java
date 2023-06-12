@@ -80,4 +80,16 @@ public class Obras
                 ", popularidad='" + popularidad + '\'' +
                 '}';
     }
+
+    public String mostrarJson()
+    {
+        return "{\n" +
+                "\"id\": " + id  +  ",\n" +
+                "\"nombre\": " + "\"" + nombre + "\"," + "\n" +
+                "\"valor\": " + valor  +  ",\n" +
+                "\"año\": " + año  +  ",\n" +
+                "\"categoria\": " + "\"" + categoria + "\"," + "\n" +
+                "\"popularidad\": " + "\"" + popularidad + "\"" + "\n" +
+                "}";
+    }
 }
