@@ -26,13 +26,13 @@ public class VistaAlta extends VerticalLayout {
         TextField texto1 = new TextField();
         Label etiqueta2 = new Label("Valor:");
         TextField texto2 = new TextField();
-        Label etiqueta3 = new Label("Año:");
+        Label etiqueta3 = new Label("Edad:");
         TextField texto3 = new TextField();
         Label etiqueta4 = new Label("Categoria:");
         TextField texto4 = new TextField();
         Label etiqueta5 = new Label("Popularidad:");
         TextField texto5 = new TextField();
-
+//Bien hecho
         Button boton = new Button("Añadir");
 //Corregido y hecho
         boton.addClickListener(new ComponentEventListener<ClickEvent<Button>>() {
