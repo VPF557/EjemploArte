@@ -24,7 +24,7 @@ public class VistaListado extends VerticalLayout {
         Grid<Obras> grid = new Grid<>(Obras.class, false);
         grid.addColumn(Obras::getNombre).setHeader("Nombre");
         grid.addColumn(Obras::getValor).setHeader("Valor");
-        grid.addColumn(Obras::getAño).setHeader("Año");
+        grid.addColumn(Obras::getEdad).setHeader("Edad");
         grid.addColumn(Obras::getCategoria).setHeader("Categoria");
         grid.addColumn(Obras::getPopularidad).setHeader("Popularidad");
 

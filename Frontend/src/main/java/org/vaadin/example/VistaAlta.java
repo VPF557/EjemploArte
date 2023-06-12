@@ -26,7 +26,7 @@ public class VistaAlta extends VerticalLayout {
         TextField texto1 = new TextField();
         Label etiqueta2 = new Label("Valor:");
         TextField texto2 = new TextField();
-        Label etiqueta3 = new Label("Año:");
+        Label etiqueta3 = new Label("Edad:");
         TextField texto3 = new TextField();
         Label etiqueta4 = new Label("Categoria:");
         TextField texto4 = new TextField();
