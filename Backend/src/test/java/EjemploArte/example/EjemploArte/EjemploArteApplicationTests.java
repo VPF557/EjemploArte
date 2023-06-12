@@ -10,7 +10,7 @@ import static org.junit.Assert.assertEquals;
 
 @SpringBootTest
 class EjemploArteApplicationTests {
-
+//fin
 	@Test
 	void contextLoads()
 	{
