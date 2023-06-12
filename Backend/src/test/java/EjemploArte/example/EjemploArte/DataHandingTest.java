@@ -19,7 +19,7 @@ public class DataHandingTest {
 
         int comprobacion;
 
-        comprobacion = data.ComprobarObjeto(pr1,listaAux);
+        comprobacion = data.ComprobarObjeto(pr1,"Arte.json",listaAux);
 
         if (comprobacion == 1)
         {
@@ -34,6 +34,19 @@ public class DataHandingTest {
     @Test
     public void eliminarObjeto()
     {
+        DataHanding data = new DataHanding();
+        ArrayList<Obras> listaAux= new ArrayList<Obras>();
+        Obras pr1 = new Obras(0,"Nuevo cuadro",129.36,85,"cuadro","Media");
+        listaAux = data.EliminarObjeto(pr1.getId(),"Arte.json");
+
+        if(data.ComprobarObjeto(pr1,"Arte.json",listaAux) == 0)
+        {
+            assertTrue(true);
+        }
+        else
+        {
+            fail("No se ha eliminado correctamente");
+        }
     }
 
     @Test
@@ -41,10 +54,10 @@ public class DataHandingTest {
     {
         DataHanding data =  new DataHanding();
         Obras pr1 = new Obras(0,"Nuevo cuadro",129.36,85,"cuadro","Media");
-        assertEquals(pr1.getNombre(),"SuperCoin");
-        assertEquals(pr1.getValor(),129, 0.001);
-        assertEquals(pr1.getEdad(),78.36, 0.001);
-        assertEquals(pr1.getCategoria(),"Terciaria");
+        assertEquals(pr1.getNombre(),"Nuevo cuadro");
+        assertEquals(pr1.getValor(),129.36, 0.001);
+        assertEquals(pr1.getEdad(),85, 0.001);
+        assertEquals(pr1.getCategoria(),"cuadro");
         assertEquals(pr1.getPopularidad(),"Media");
     }
 }

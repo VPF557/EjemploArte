@@ -28,7 +28,7 @@ public class DataHanding {
         return listaAux;
     }
 
-    public int ComprobarObjeto(Obras objeto1, ArrayList<Obras> listaAux)
+    public int ComprobarObjeto(Obras objeto1, String ruta  ,ArrayList<Obras> listaAux)
     {
         //En esta funcion se añaden los nuevos elementos enviados desde el front a un ArrayList para posteriormente actualizar la BBDD
         LeerJson reader = new LeerJson();
