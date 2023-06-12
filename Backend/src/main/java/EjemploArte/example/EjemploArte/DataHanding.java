@@ -27,8 +27,8 @@ public class DataHanding {
         }
         return listaAux;
     }
-/*
-    public int ComprobarObjeto(Criptomoneda objeto1, String ruta , ArrayList<Criptomoneda> listaAux)
+
+    public int ComprobarObjeto(Obras objeto1, String ruta , ArrayList<Obras> listaAux)
     {
         //En esta funcion se añaden los nuevos elementos enviados desde el front a un ArrayList para posteriormente actualizar la BBDD
         LeerJson reader = new LeerJson();
@@ -39,7 +39,7 @@ public class DataHanding {
             if
             (       objeto1.getNombre().equals(listaAux.get(i).getNombre()) &&
                     objeto1.getValor() ==  listaAux.get(i).getValor() &&
-                    objeto1.getFluctuacion() == listaAux.get(i).getFluctuacion() &&
+                    objeto1.getEdad() == listaAux.get(i).getEdad() &&
                     objeto1.getCategoria().equals(listaAux.get(i).getCategoria()) &&
                     objeto1.getPopularidad().equals(listaAux.get(i).getPopularidad())
             )
@@ -55,6 +55,6 @@ public class DataHanding {
         return control;
     }
 
-*/
+
 
 }
