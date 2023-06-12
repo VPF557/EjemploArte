@@ -1,0 +1,3 @@
+FROM amazoncorretto:11
+COPY EjemploArte-1.0.jar EjemploArte-1.0.jar
+ENTRYPOINT ["java", "-jar", "/EjemploArte-1.0.jar"]
