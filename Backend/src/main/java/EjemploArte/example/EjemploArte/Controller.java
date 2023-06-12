@@ -28,16 +28,16 @@ public class Controller {
         escribirJSON.escribirObjeto1(lista);
         return lista;
     }
-/*
-    @DeleteMapping("/CriptoB{id}")
-    public ArrayList<Criptomoneda> Borrar(@RequestParam int id)
+
+    @DeleteMapping("/Arte{id}")
+    public ArrayList<Obras> Borrar(@RequestParam int id)
     {
         DataHanding dataHanding = new DataHanding();
-        ArrayList<Criptomoneda> lista;
-        lista = dataHanding.EliminarObjeto(id,"Criptomonedas.json");
+        ArrayList<Obras> lista;
+        lista = dataHanding.EliminarObjeto(id,"Arte.json");
         EscribirJson escribirJSON = new EscribirJson();
         escribirJSON.escribirObjeto1(lista);
         return lista;
     }
- */
+
 }
