@@ -8,12 +8,12 @@ import java.util.Objects;
 @RestController
 public class Controller {
 
-    @GetMapping("/Obras")
+    @GetMapping("/Arte")
     public ArrayList<Obras> listaObjeto1()
     {
         LeerJson reader = new LeerJson();
         //Leemos el reason e introducimos los elementos en un arraylist
-        ArrayList<Obras> lista = reader.LeerFicheroJson1("Obras.json");
+        ArrayList<Obras> lista = reader.LeerFicheroJson1("Arte.json");
         //Mostramos los elementos leidos
         return lista;
     }
