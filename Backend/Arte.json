@@ -1,0 +1,6 @@
+[
+  {"id":1,"nombre":"Monalisa","valor":20000.0,"año":1465,"Tipo":"retrato","popularidad":"Alta"},
+  {"id":2,"nombre":"Las meninas","valor":10000.0,"año":1569,"categoria":"pintura","popularidad":"Alta"},
+  {"id":3,"nombre":"La rendicion de breda","valor":2000.0,"año":1523,"categoria":"pintura","popularidad":"Baja"},
+  {"id":4,"nombre":"La noche estrellada","valor":300.0,"año":1826,"categoria":"cuadro","popularidad":"Alta"}
+]
